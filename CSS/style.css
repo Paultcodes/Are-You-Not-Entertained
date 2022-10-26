@@ -1,0 +1,12 @@
+.flow-text{
+    align-items: stretch;
+} 
+
+ul{
+    display: flex;
+    
+}
+li{
+    list-style: square;
+    margin-right: 10px;
+}
