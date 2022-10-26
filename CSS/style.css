@@ -11,6 +11,7 @@ li{
     margin-right: 10px;
 } 
 
-ul{
-    
+.results-flex {
+    display: flex;
+    flex-direction: column;
 }
