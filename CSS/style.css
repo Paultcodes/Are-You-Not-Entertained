@@ -1,48 +1,108 @@
-body{
-background-color: floralwhite;
+body {
+  background-color: floralwhite;
 }
 
-.flow-text{
-    align-items: stretch;
-    font-family: monospace;
-} 
-
-ul{
-    display: flex;
-    
+.flow-text {
+  align-items: stretch;
+  font-family: monospace;
 }
-li{
-    list-style: square;
-    margin-right: 10px;
-} 
+
+ul {
+  display: flex;
+}
+li {
+  list-style: square;
+  margin-right: 10px;
+}
 
 .results-flex {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.brand-logo.center, .white-text, h4{
-font-family: monospace;
+.results-flex li {
+  font-size: 40px;
+  margin-top: 10px;
 }
-.page-footer{
-padding-bottom: 150px;
-background-color: skyblue;
+
+.brand-logo.center,
+.white-text,
+h4 {
+  font-family: monospace;
+  font-size: 30px;
 }
-.nav-wrapper{
-    background-color: indianred;
-    
+
+label {
+  color: black;
+  font-size: 15px;
 }
-.card-content.white-text{
-    background-color: lightsteelblue;
+
+.middle-section .left-side {
+  width: 400px;
+  /* border: 1px solid; */
+  height: 600px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-.active, button{
-font-family: cursive;
+
+.middle-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.right-side {
+  width: 400px;
+  /* border: 1px solid; */
+  height: 600px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+}
+
+.fav-movies {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer {
+  padding-bottom: 150px;
+  background-color: skyblue;
+}
+.nav-wrapper {
+  background-color: indianred;
+}
+.card-content.white-text {
+  background-color: lightsteelblue;
+}
+.active,
+button {
+  font-family: cursive;
+}
+
+.center-welcome {
+  text-align: center;
+}
+
+.margin-welcome {
+  margin: 10px;
 }
 
 @media screen and (max-width: 600px) {
-    main,
-    nav {
+  main,
+  nav {
     display: flex;
     flex-direction: column;
-    }
+  }
 }
