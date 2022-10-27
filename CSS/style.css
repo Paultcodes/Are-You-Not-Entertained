@@ -1,5 +1,10 @@
+body{
+background-color: floralwhite;
+}
+
 .flow-text{
     align-items: stretch;
+    font-family: monospace;
 } 
 
 ul{
@@ -14,4 +19,30 @@ li{
 .results-flex {
     display: flex;
     flex-direction: column;
+}
+
+.brand-logo.center, .white-text, h4{
+font-family: monospace;
+}
+.page-footer{
+padding-bottom: 150px;
+background-color: skyblue;
+}
+.nav-wrapper{
+    background-color: indianred;
+    
+}
+.card-content.white-text{
+    background-color: lightsteelblue;
+}
+.active, button{
+font-family: cursive;
+}
+
+@media screen and (max-width: 600px) {
+    main,
+    nav {
+    display: flex;
+    flex-direction: column;
+    }
 }
