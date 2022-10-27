@@ -42,6 +42,7 @@ font-family: cursive;
 @media screen and (max-width: 600px) {
     main,
     nav {
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
     }
 }
