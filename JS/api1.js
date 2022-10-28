@@ -5,7 +5,6 @@ button.addEventListener("click", populateMovie);
 function populateMovie() {
   var userInput = document.querySelector(".user-input");
   var userChoice = userInput.value;
-  userInput.value = "";
 
   var completeURL = "https://www.omdbapi.com/?apikey=98b986e7&t=" + userChoice;
 
