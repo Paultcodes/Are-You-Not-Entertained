@@ -7,7 +7,7 @@ function populateMovie() {
   var userChoice = userInput.value;
   userInput.value = "";
 
-  var completeURL = "http://www.omdbapi.com/?apikey=98b986e7&t=" + userChoice;
+  var completeURL = "https://www.omdbapi.com/?apikey=98b986e7&t=" + userChoice;
 
   fetch(completeURL)
     .then(function (response) {
