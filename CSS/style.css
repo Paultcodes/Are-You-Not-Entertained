@@ -50,6 +50,26 @@ label {
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
+.btn-movie {
+  margin-top: 10px;
+  transition: all 0.5s;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(150, 238, 238);
+  height: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn-movie:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+}
+
 .middle-section {
   display: flex;
   justify-content: space-around;
@@ -77,14 +97,15 @@ label {
 }
 
 .page-footer {
-  padding-bottom: 150px;
+  /* padding-bottom: 150px; */
   background-color: skyblue;
+  margin-top: 20px;
 }
 .nav-wrapper {
   background-color: indianred;
 }
 .card-content.white-text {
-  background-color: lightsteelblue;
+  background-color: skyblue;
 }
 .active,
 button {
