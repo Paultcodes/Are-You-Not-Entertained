@@ -33,3 +33,4 @@ function displayResults(jsonFile) {
   var rating = document.querySelector(".rating");
   rating.textContent = "Rating: " + jsonFile.imdbRating;
 }
+

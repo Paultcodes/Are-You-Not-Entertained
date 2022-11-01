@@ -2,14 +2,24 @@ var buttonSave = document.getElementById("movie-btn");
 
 var movieInput = document.querySelector(".user-input");
 
-var movieArray = [];
 
-function storeMovie() {
-  localStorage.setItem("movie", JSON.stringify(movieArray));
+
+function storeMovie(array) {
+  var currentMovies= JSON.parse(localStorage.getItem("movie"))
+  var newMovies;
+  if(!currentMovies){
+    newMovies=[...array]
+    
+  }else{
+    newMovies=[...currentMovies,...array]
+  }
+  localStorage.setItem("movie", JSON.stringify(newMovies));
+init();
 }
 
 buttonSave.addEventListener("click", function (event) {
   var movieHistory = movieInput.value.trim();
+  var movieArray = [];
 
   if (!movieHistory) {
     return;
@@ -17,26 +27,26 @@ buttonSave.addEventListener("click", function (event) {
 
   movieArray.push(movieHistory);
 
-  storeMovie();
-  showMovies();
+  storeMovie(movieArray);
+  showMovies(array);
   console.log(movieArray);
 });
 
 function init() {
   var storedMovies = JSON.parse(localStorage.getItem("movie"));
-
+var movieArray;
   if (storedMovies !== null) {
     movieArray = storedMovies;
   }
 
-  showMovies();
+  showMovies(movieArray);
 }
 
-function showMovies() {
+function showMovies(array) {
   var history = document.querySelector(".history");
   clearHistory(history);
-  for (let i = 0; i < movieArray.length; i++) {
-    const element = movieArray[i];
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
 
     var movieButton = document.createElement("button");
     movieButton.classList.add("btn-movie");
