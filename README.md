@@ -24,7 +24,7 @@ SO WE can entertain our users and learn the fundamentals of front-page developme
 We wanted to keep the HTML simple but based off of a wireframe. We all came to a decision together how we wanted the webpage to look.
 
 ### <span style="color: purple">CSS</span>
-We wanted to have a CSS style that would be easy on the eyes to look at. So we decided to use light colors, and easy to read fonts to be a part of our CSS strucutre. 
+We wanted to have a CSS style that would be easy on the eyes. So we decided to use light colors, and easy to read fonts for our CSS structure. 
 
 ### <span style="color: purple">API #1</span>
 
