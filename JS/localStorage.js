@@ -2,21 +2,23 @@ var buttonSave = document.getElementById("movie-btn");
 
 var movieInput = document.querySelector(".user-input");
 
+var searchHistory = document.querySelector(".history");
 
 
 function storeMovie(array) {
-  var currentMovies= JSON.parse(localStorage.getItem("movie"))
+  var currentMovies = JSON.parse(localStorage.getItem("movie"));
   var newMovies;
-  if(!currentMovies){
-    newMovies=[...array]
-    
-  }else{
-    newMovies=[...currentMovies,...array]
+  if (!currentMovies) {
+    newMovies = [...array];
+  } else {
+    newMovies = [...currentMovies, ...array];
   }
   localStorage.setItem("movie", JSON.stringify(newMovies));
-init();
+  init();
 }
-
+document
+  .getElementById("clearSearches")
+  .addEventListener("click", clearLocalStorage);
 buttonSave.addEventListener("click", function (event) {
   var movieHistory = movieInput.value.trim();
   var movieArray = [];
@@ -28,13 +30,13 @@ buttonSave.addEventListener("click", function (event) {
   movieArray.push(movieHistory);
 
   storeMovie(movieArray);
-  showMovies(array);
+  init();
   console.log(movieArray);
 });
 
 function init() {
   var storedMovies = JSON.parse(localStorage.getItem("movie"));
-var movieArray;
+  var movieArray;
   if (storedMovies !== null) {
     movieArray = storedMovies;
   }
@@ -43,8 +45,7 @@ var movieArray;
 }
 
 function showMovies(array) {
-  var history = document.querySelector(".history");
-  clearHistory(history);
+  clearHistory(searchHistory);
   for (let i = 0; i < array.length; i++) {
     const element = array[i];
 
@@ -53,7 +54,7 @@ function showMovies(array) {
     movieButton.textContent = element;
     console.log(movieButton);
 
-    history.appendChild(movieButton);
+    searchHistory.appendChild(movieButton);
   }
 }
 
@@ -62,6 +63,12 @@ function clearHistory(history) {
   buttons.forEach((button) => {
     history.removeChild(button);
   });
+}
+
+function clearLocalStorage(e) {
+  e.preventDefault();
+  localStorage.removeItem("movie");
+  searchHistory.innerHTML = "";
 }
 
 init();

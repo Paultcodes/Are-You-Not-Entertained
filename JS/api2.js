@@ -1,4 +1,5 @@
 var button = document.querySelector(".random-button");
+var errorMessage = document.querySelector(".error-msg")
 
 button.addEventListener("click", populateRandom);
 
@@ -12,11 +13,11 @@ function populateRandom() {
           displayResults(data);
         });
       } else {
-        alert("Error: " + response.statusText);
+        errorMessage.textContent = "Error: " + response.statusText
       }
     })
     .catch(function (error) {
-      alert("Unable to connect to Bored Api");
+      errorMessage.textContent = "⚠️Unable to connect to Bored Api⚠️"
     });
 
     function displayResults(jsonFile) {
